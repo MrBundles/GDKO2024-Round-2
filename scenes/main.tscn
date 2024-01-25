@@ -19,6 +19,7 @@ menu_scenes = Array[PackedScene]([ExtResource("2_mvn82"), ExtResource("3_1vor0")
 [node name="LevelLayer" type="CanvasLayer" parent="."]
 
 [node name="Level" parent="LevelLayer" instance=ExtResource("10_yuwa2")]
+script = null
 
 [node name="UILayer" type="CanvasLayer" parent="."]
 layer = 2

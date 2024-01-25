@@ -17,9 +17,9 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Firebase="*res://addons/godot-firebase/firebase/firebase.tscn"
 Signals="*res://globals/global_signal_manager/global_signal_manager.gd"
 Variables="*res://globals/global_variable_manager/global_variable_manager.gd"
+Firebase="*res://addons/godot-firebase/firebase/firebase.tscn"
 
 [display]
 
