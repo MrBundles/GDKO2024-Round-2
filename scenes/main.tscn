@@ -1,0 +1,47 @@
+[gd_scene load_steps=11 format=3 uid="uid://bu4ihnopkqhwx"]
+
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_ds7j1"]
+[ext_resource type="PackedScene" uid="uid://dr6i6j6ycvxn5" path="res://scenes/ui/menus/00_empty/menu_empty.tscn" id="2_mvn82"]
+[ext_resource type="PackedScene" uid="uid://1fycttyd48ym" path="res://scenes/ui/menus/01_main/menu_main.tscn" id="3_1vor0"]
+[ext_resource type="PackedScene" uid="uid://24qr0f8gggb7" path="res://scenes/ui/menus/02_levels/menu_levels.tscn" id="4_n0mt0"]
+[ext_resource type="PackedScene" uid="uid://3vfe8a0j82xe" path="res://scenes/ui/menus/03_settings/menu_settings.tscn" id="5_0nksp"]
+[ext_resource type="PackedScene" uid="uid://7vle5n6sh8h2" path="res://scenes/ui/menus/04_credits/menu_credits.tscn" id="6_wlgn0"]
+[ext_resource type="PackedScene" uid="uid://nvknqt6k6vso" path="res://scenes/ui/menus/05_controls/menu_controls.tscn" id="7_67bpl"]
+[ext_resource type="PackedScene" uid="uid://dwore5jcpd4ie" path="res://scenes/ui/menus/06_feedback/menu_feedback.tscn" id="8_tf2s6"]
+[ext_resource type="PackedScene" uid="uid://diq6iltn6jv4y" path="res://scenes/ui/menus/07_leaderboard/menu_leaderboard.tscn" id="9_s54se"]
+[ext_resource type="PackedScene" uid="uid://by17ra5wntwp1" path="res://scenes/game/levels/level_00.tscn" id="10_yuwa2"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_ds7j1")
+level_scenes = Array[PackedScene]([null])
+menu_scenes = Array[PackedScene]([ExtResource("2_mvn82"), ExtResource("3_1vor0"), ExtResource("4_n0mt0"), ExtResource("5_0nksp"), ExtResource("6_wlgn0"), ExtResource("7_67bpl"), ExtResource("8_tf2s6"), ExtResource("9_s54se")])
+
+[node name="LevelLayer" type="CanvasLayer" parent="."]
+
+[node name="Level" parent="LevelLayer" instance=ExtResource("10_yuwa2")]
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UILayer"]
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="LeftVBoxContainer" type="VBoxContainer" parent="UILayer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="RightVBoxContainer" type="VBoxContainer" parent="UILayer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="MenuLayer" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="MenuMain" parent="MenuLayer" instance=ExtResource("3_1vor0")]

@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://n1nxwr25xkkn"]
+
+[ext_resource type="FontFile" uid="uid://cwruuygjh2sdf" path="res://assets/graphics/fonts/roboto/Roboto-Regular.ttf" id="1_2wiwb"]
+
+[resource]
+font = ExtResource("1_2wiwb")
+font_size = 48

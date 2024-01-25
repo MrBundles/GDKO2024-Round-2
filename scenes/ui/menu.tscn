@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmctua128iour"]
+
+[ext_resource type="Script" path="res://scenes/ui/menu.gd" id="1_6hesk"]
+[ext_resource type="FontFile" uid="uid://q6oqiulieari" path="res://assets/graphics/fonts/roboto/Roboto-Bold.ttf" id="2_seti4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1w103"]
+font = ExtResource("2_seti4")
+font_size = 128
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6hesk")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Menu Title"
+label_settings = SubResource("LabelSettings_1w103")
+horizontal_alignment = 1

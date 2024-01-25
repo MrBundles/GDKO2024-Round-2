@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dr6i6j6ycvxn5"]
+
+[ext_resource type="PackedScene" uid="uid://dmctua128iour" path="res://scenes/ui/menu.tscn" id="1_l0s16"]
+[ext_resource type="Script" path="res://scenes/ui/menus/00_empty/menu_empty.gd" id="2_drdc5"]
+
+[node name="MenuEmpty" instance=ExtResource("1_l0s16")]
+script = ExtResource("2_drdc5")
+
+[node name="TitleLabel" parent="MarginContainer/VBoxContainer" index="0"]
+text = ""

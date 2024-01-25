@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://7vle5n6sh8h2"]
+
+[ext_resource type="PackedScene" uid="uid://dmctua128iour" path="res://scenes/ui/menu.tscn" id="1_lvpdk"]
+[ext_resource type="Script" path="res://scenes/ui/menus/04_credits/menu_credits.gd" id="2_3vuyt"]
+
+[node name="MenuCredits" instance=ExtResource("1_lvpdk")]
+script = ExtResource("2_3vuyt")

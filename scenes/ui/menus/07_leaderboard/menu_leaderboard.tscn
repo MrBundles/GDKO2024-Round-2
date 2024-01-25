@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://diq6iltn6jv4y"]
+
+[ext_resource type="PackedScene" uid="uid://dmctua128iour" path="res://scenes/ui/menu.tscn" id="1_vh0rs"]
+[ext_resource type="Script" path="res://scenes/ui/menus/07_leaderboard/menu_leaderboard.gd" id="2_4i2id"]
+
+[node name="MenuLeaderboard" instance=ExtResource("1_vh0rs")]
+script = ExtResource("2_4i2id")

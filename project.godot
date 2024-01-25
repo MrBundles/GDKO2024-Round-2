@@ -11,12 +11,15 @@ config_version=5
 [application]
 
 config/name="GDKO 2024-round-2"
+run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Firebase="*res://addons/godot-firebase/firebase/firebase.tscn"
+Signals="*res://globals/global_signal_manager/global_signal_manager.gd"
+Variables="*res://globals/global_variable_manager/global_variable_manager.gd"
 
 [display]
 
