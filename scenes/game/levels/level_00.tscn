@@ -1,5 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://by17ra5wntwp1"]
+[gd_scene load_steps=3 format=3 uid="uid://by17ra5wntwp1"]
 
 [ext_resource type="PackedScene" uid="uid://d01u662veejyw" path="res://scenes/game/level.tscn" id="1_ti26n"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_pdslk"]
+resource_local_to_scene = true
+bounce = 0.75
+
 [node name="Level" instance=ExtResource("1_ti26n")]
+
+[node name="Ball" parent="." index="1"]
+physics_material_override = SubResource("PhysicsMaterial_pdslk")

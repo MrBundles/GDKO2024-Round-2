@@ -1,6 +1,6 @@
 #@tool
 #class_name NameOfClass
-extends RigidBody2D
+extends StaticBody2D
 
 ## purpose: 
 
@@ -11,7 +11,7 @@ extends RigidBody2D
 # constants --------------------------------------------------------------------------------------------------------------
 
 # variables --------------------------------------------------------------------------------------------------------------
-@onready var sampler_instrument: SamplerInstrument = $SamplerInstrument
+
 
 # built-in functions ---------------------------------------------------------------------------------------------------------
 func _ready():
@@ -26,11 +26,7 @@ func _ready():
 
 
 func _process(delta):
-	queue_redraw()
-
-
-func _draw():
-	draw_circle(Vector2.ZERO, 32, Color.WHITE)
+	pass
 
 
 # helper functions --------------------------------------------------------------------------------------------------------
@@ -40,8 +36,5 @@ func _draw():
 
 
 # signal functions --------------------------------------------------------------------------------------------------------
-func _on_body_entered(body):
-	print("body entered")
-	if body.is_in_group("block"):
-		print("block detected")
-		sampler_instrument.play_note("C", 5, 5)
+
+

@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Signals="*res://globals/global_signal_manager/global_signal_manager.gd"
 Variables="*res://globals/global_variable_manager/global_variable_manager.gd"
 Firebase="*res://addons/godot-firebase/firebase/firebase.tscn"
+NoteValue="*res://addons/SimpleSampler/note_value.gd"
 
 [display]
 
@@ -34,7 +35,7 @@ script/templates_search_path="res://assets/code/script_templates"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot-firebase/plugin.cfg", "res://addons/http-sse-client/plugin.cfg")
+enabled=PackedStringArray("res://addons/SimpleSampler/plugin.cfg", "res://addons/godot-firebase/plugin.cfg", "res://addons/http-sse-client/plugin.cfg")
 
 [input]
 
