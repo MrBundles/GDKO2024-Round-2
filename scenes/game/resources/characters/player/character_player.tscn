@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4y7cipya3vxn"]
+
+[ext_resource type="Script" path="res://scenes/game/resources/characters/player/character_player.gd" id="1_ow0hn"]
+
+[node name="Player" type="CharacterBody2D"]
+velocity = Vector2(0, 1000)
+script = ExtResource("1_ow0hn")
+h_accel = 4000.0
+h_decel = 3000.0
+gravity = 3000.0
+jump = 75000.0
+h_vel_max = 750.0
+v_vel_max = 1250.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, -32, 16, -32, 32, -16, 32, 32, -32, 32, -32, -16, -16, -32)
+
+[node name="CoyoteTimer" type="Timer" parent="."]
+wait_time = 0.15
+one_shot = true

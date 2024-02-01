@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvnwcsclecage"]
+
+[ext_resource type="Script" path="res://scenes/game/resources/objects/ball/object_ball.gd" id="1_o6xq7"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rpl57"]
+resource_local_to_scene = true
+bounce = 0.75
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pfqhf"]
+radius = 32.0
+
+[node name="Ball" type="RigidBody2D"]
+position = Vector2(602, 184)
+physics_material_override = SubResource("PhysicsMaterial_rpl57")
+script = ExtResource("1_o6xq7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_pfqhf")

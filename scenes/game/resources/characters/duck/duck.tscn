@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqkjjeqv5osgc"]
+
+[ext_resource type="Script" path="res://scenes/game/resources/characters/duck/character_duck.gd" id="1_lo8mt"]
+
+[node name="Duck" type="CharacterBody2D"]
+position = Vector2(481, 308)
+velocity = Vector2(0, 1000)
+script = ExtResource("1_lo8mt")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, -32, 16, -32, 32, -16, 32, 32, -32, 32, -32, -16, -16, -32)
+
+[node name="CoyoteTimer" type="Timer" parent="."]
+wait_time = 0.15
+one_shot = true

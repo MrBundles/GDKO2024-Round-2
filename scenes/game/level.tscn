@@ -1,6 +1,40 @@
-[gd_scene load_steps=2 format=3 uid="uid://d01u662veejyw"]
+[gd_scene load_steps=6 format=3 uid="uid://d01u662veejyw"]
 
 [ext_resource type="Script" path="res://scenes/game/level.gd" id="1_yo1ke"]
+[ext_resource type="Texture2D" uid="uid://pvjfy86teqjc" path="res://icon.svg" id="2_1f3va"]
+[ext_resource type="PackedScene" uid="uid://cvnwcsclecage" path="res://scenes/game/resources/objects/ball/ball.tscn" id="3_yjx30"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8m02j"]
+texture = ExtResource("2_1f3va")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSet" id="TileSet_0bvvo"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_8m02j")
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_yo1ke")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_0bvvo")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 1, 0, 65536, 1, 0, 131072, 1, 0, 196608, 1, 0, 262144, 1, 0, 327680, 1, 0, 393216, 1, 0, 458752, 1, 0, 524288, 1, 0, 589824, 1, 0, 655360, 1, 0, 720896, 1, 0, 786432, 1, 0, 851968, 1, 0, 917504, 1, 0, 983040, 1, 0, 1114112, 1, 0, 1114113, 1, 0, 1114114, 1, 0, 1114115, 1, 0, -65534, 1, 0, -65533, 1, 0, -65532, 1, 0, -65531, 1, 0, 65566, 1, 0, 131102, 1, 0, 1048576, 1, 0, 1114116, 1, 0, 1114117, 1, 0, 1114118, 1, 0, 1114119, 1, 0, 1114120, 1, 0, 1114121, 1, 0, 1114122, 1, 0, 1114123, 1, 0, 1114124, 1, 0, 1114125, 1, 0, 1114126, 1, 0, 1114127, 1, 0, 1114128, 1, 0, 1114129, 1, 0, 1114130, 1, 0, 1114131, 1, 0, 1114132, 1, 0, 1114133, 1, 0, 1114134, 1, 0, 1114135, 1, 0, 1114136, 1, 0, 1114137, 1, 0, 1114138, 1, 0, 1114139, 1, 0, 1114140, 1, 0, 1114141, 1, 0, 1114142, 1, 0, 1048606, 1, 0, 983070, 1, 0, 917534, 1, 0, 851998, 1, 0, 786462, 1, 0, 720926, 1, 0, 655390, 1, 0, 589854, 1, 0, 524318, 1, 0, 458782, 1, 0, 393246, 1, 0, 327710, 1, 0, 262174, 1, 0, 196638, 1, 0, 30, 1, 0, -65506, 1, 0, -65507, 1, 0, -65508, 1, 0, -65509, 1, 0, -65510, 1, 0, -65511, 1, 0, -65512, 1, 0, -65513, 1, 0, -65514, 1, 0, -65515, 1, 0, -65516, 1, 0, -65517, 1, 0, -65518, 1, 0, -65519, 1, 0, -65520, 1, 0, -65521, 1, 0, -65522, 1, 0, -65523, 1, 0, -65524, 1, 0, -65525, 1, 0, -65526, 1, 0, -65527, 1, 0, -65528, 1, 0, -65529, 1, 0, -65530, 1, 0, -65535, 1, 0, -65536, 1, 0)
+
+[node name="Ball" parent="." instance=ExtResource("3_yjx30")]
